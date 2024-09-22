@@ -1,16 +1,16 @@
+// Button.stories.jsx
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 
-const meta: Meta<typeof Button> = {
+export default {
   title: 'Components/Button',
   component: Button,
   args: {
-    icon: '', // Default value for the icon prop
+    icon: '',
   },
   argTypes: {
     icon: {
-      options: ['None', 'StarIcon'], // Options for the icon prop
+      options: ['None', 'StarIcon'], 
       mapping: {
         None: null,
         StarIcon: <span role="img" aria-label="star">⭐</span>,
@@ -18,32 +18,29 @@ const meta: Meta<typeof Button> = {
       control: {
         type: 'radio',
         labels: {
-          None: 'No Icon',
-          StarIcon: 'Star Icon',
+          None: 'Without icon',
+          StarIcon: 'Star icon',
         },
       },
     },
   },
 };
 
-export default meta;
-type Story = StoryObj<typeof Button>;
-
-export const Primary: Story = {
+export const Primary = {
   args: {
     label: 'Primary Button',
     variant: 'primary',
   },
 };
 
-export const Secondary: Story = {
+export const Secondary = {
   args: {
     label: 'Secondary Button',
     variant: 'secondary',
   },
 };
 
-export const Disabled: Story = {
+export const Disabled = {
   args: {
     label: 'Disabled Button',
     variant: 'primary',
@@ -51,10 +48,10 @@ export const Disabled: Story = {
   },
 };
 
-export const WithIcon: Story = {
+export const WithIcon = {
   args: {
     label: 'Button with Icon',
     variant: 'primary',
-    icon: 'StarIcon', // Use the string key from the mapping
+    icon: 'StarIcon', 
   },
 };

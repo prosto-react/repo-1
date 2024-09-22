@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import './Header.css';  // Предполагается, что стили будут вынесены в отдельный файл
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="header">
       <Logo />
