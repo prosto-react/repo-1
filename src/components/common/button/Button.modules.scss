@@ -1,0 +1,69 @@
+/* Переменные */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+$disabled-color: #ccc;
+$white-color: #fff;
+
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+
+/* Миксин для кнопки */
+@mixin button-styles($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px 20px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+/* Основной класс кнопки */
+.btn {
+  &-primary {
+    @include button-styles($primary-color, $white-color);
+  }
+
+  &-secondary {
+    @include button-styles($secondary-color, $white-color);
+  }
+
+  &-danger {
+    @include button-styles($danger-color, $white-color);
+  }
+
+  /* Размеры кнопок */
+  &-small {
+    font-size: $font-size-small;
+    padding: 5px 10px;
+  }
+
+  &-medium {
+    font-size: $font-size-medium;
+    padding: 10px 20px;
+  }
+
+  &-large {
+    font-size: $font-size-large;
+    padding: 15px 30px;
+  }
+}
+
+/* Стили для иконки */
+.btn-icon {
+  margin-right: 8px;
+}
