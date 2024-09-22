@@ -31,7 +31,7 @@
         "@typescript-eslint/triple-slash-reference": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-uses-react": "error",
-        "linebreak-style": ["error", "windows", "unix"]
+        "linebreak-style": ["windows"]
         
     },
     "settings": {
