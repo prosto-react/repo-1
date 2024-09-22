@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Нужно превратить файл в ts и указать типы аргументов и типы возвращаемого значения
  * */
@@ -63,7 +64,7 @@ interface Item {
 }
 
 export const toStringArray = (arr: Item[]): string[] => {
-  return arr.map((item) => item.value.toString());
+  return arr.map(({ value, number }) => `${value}_${number}`);
 };
 
 interface Customer {
