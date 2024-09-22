@@ -1,17 +1,18 @@
 import React from 'react';
 import Logo from './Logo';
-import './Header.css';  // Предполагается, что стили будут вынесены в отдельный файл
+import styles from './Header.module.scss'
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className={styles.header}>
+      <div className={styles.container}>
       <Logo />
       <nav>
-        {/* Добавь сюда элементы навигации */}
         <a href="/dashboard">Dashboard</a>
         <a href="/profile">Profile</a>
         <a href="/settings">Settings</a>
-      </nav>
+      </nav>  
+      </div>
     </header>
   );
 };

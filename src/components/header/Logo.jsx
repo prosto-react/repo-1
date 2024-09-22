@@ -1,10 +1,13 @@
 import React from 'react';
+import logoImage from '../../assets/img/icon/logo1.png';
+import styles from './Logo.module.scss'
 
 const Logo = () => {
   return (
-    <div style={{ width: '50px', height: '50px', backgroundColor: '#000', borderRadius: '50%' }}>
+    <div className={styles.logo}>
+    <img src={logoImage} alt="Logo" />
    
-    </div>
+  </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Modal from './Modal';
 
 export default {
@@ -10,21 +10,19 @@ export default {
 const Template = (args) => {
   const [visible, setVisible] = useState(args.visible);
 
+  useEffect(() => {
+    setVisible(args.visible);
+  }, [args.visible]);
+
   const handleClose = () => {
     setVisible(false);
+    if (args.onClose) args.onClose(); // вызов onClose, если передан
   };
-
   return (
     <div>
       <button onClick={() => setVisible(true)}>Open Modal</button>
       <Modal {...args} visible={visible} onClose={handleClose}>
-        <h2>About me</h2>
-        <p>Bessie Cooper</p>
-        <p>UX Research Project Management CX Strategy</p>
-        <p>Full Name: Bessie Cooper</p>
-        <p>Mobile: (123) 123 1234</p>
-        <p>Email: BessieCooper@example.com</p>
-        <p>Location: USA</p>
+        {args.children}
       </Modal>
     </div>
   );
@@ -33,4 +31,5 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.args = {
   visible: false,
+  children: 'Children',
 };

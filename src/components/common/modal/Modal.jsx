@@ -1,13 +1,13 @@
 import React from 'react';
-import './Modal.module.scss';
+import styles from './Modal.module.scss';
 
 const Modal = ({ visible, onClose, children }) => {
   if (!visible) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button className="modal-close" onClick={onClose}>
+    <div className={styles.modalOverlay}>
+      <div className={styles.modalContent}>
+        <button className={styles.modalClose} onClick={onClose}>
           &times;
         </button>
         {children}

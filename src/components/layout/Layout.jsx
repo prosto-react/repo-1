@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from '../../header/Header';
+import Header from '../header/Header';
+import styles from './Layout.module.scss'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: '60px' }}>
+      <main className={styles.main}>
         {children}
       </main>
     </>
@@ -13,3 +14,4 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+ 
