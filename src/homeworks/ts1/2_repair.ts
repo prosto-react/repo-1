@@ -42,7 +42,7 @@ export type Percent = {
 const getDataAmount = (data: Data): number => {
   switch (data.type) {
     case 'Money':
-      return data.value.amount;
+      return (data.value as Money).amount;
     case 'Percent':
       throw new Error(`Cannot return amount for percent`);
     default: {
