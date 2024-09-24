@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // Этот блок кода удалить и раскомментировать код ниже
 
 import {

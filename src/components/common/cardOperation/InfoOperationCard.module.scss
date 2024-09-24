@@ -1,0 +1,47 @@
+.operationCard {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    font-family: 'Archivo', sans-serif;
+  
+    .operationHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+  
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+  
+      .operationAmount {
+        font-size: 16px;
+        font-weight: bold;
+      
+      }
+      .positive {
+        color: #4CAF50; /* Зеленый для положительных сумм */
+      }
+      
+      .negative {
+        color: #F44336; /* Красный для отрицательных сумм */
+      }
+    }
+  
+    .operationCategory {
+      font-size: 14px;
+      font-weight: bold;
+      color: #888;
+      margin-bottom: 4px;
+    }
+  
+    .operationDescription {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+  
